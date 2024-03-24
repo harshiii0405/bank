@@ -1,0 +1,92 @@
+<!-- sign-up.component.html
+
+<section
+  class="relative h-screen overflow-hidden bg-cover bg-center"
+  style="
+    background-image: url('https://png.pngtree.com/background/20230827/original/pngtree-d-rendering-of-a-glowing-digital-business-interface-showcasing-finance-innovation-picture-image_4843680.jpg');
+  "
+>
+  <div class="w-3/4 m-auto pt-16 p-auto">
+    <div class="w-1/2 bg-slate-200 rounded mt-8 p-12 mx-auto">
+      <form
+        class="flex flex-col gap-8 text-slate-800 text-xl"
+        [formGroup]="loginForm"
+      >
+        <div class="text-center font-mono text-3xl">
+          Welcome to Online Banking
+        </div>
+        <div class="flex flex-col gap-2">
+          <label for="phone">Phone no*: </label>
+          <input
+            type="tel"
+            formControlName="phone"
+            class="rounded-md bg-slate-300 p-1 text-md focus:border-0"
+          />
+        </div>
+        <div class="flex flex-col gap-2">
+          <label for="password">Password*: </label>
+          <input
+            type="password"
+            formControlName="password"
+            class="rounded-md bg-slate-300 p-1 text-md focus:border-0"
+          />
+        </div>
+        <div class="flex justify-between">
+          <button
+            class="bg-slate-900 rounded-xl p-2 px-4 text-white hover:bg-slate-300 hover:text-slate-900 transition-all ease-in-out"
+            type="button"
+            (click)="onClickLogin()"
+          >
+            Log in
+          </button>
+          <button
+            class="bg-slate-900 rounded-xl p-2 px-4 text-white hover:bg-slate-300 hover:text-slate-900 transition-all ease-in-out"
+            type="button"
+            routerLink="/signup"
+            routerLinkActive="active"
+          >
+            Sign Up
+          </button>
+        </div>
+      </form>
+      
+      <div style="color: red">
+        {{ msg }}
+      </div>
+    </div>
+  </div>
+</section> -->
+<section class="relative h-screen flex justify-center items-center bg-gray-900">
+  <!-- Black and grey shade effect -->
+  <div class="absolute inset-0 bg-gradient-to-br from-black to-gray-800 opacity-80"></div>
+  
+  <!-- Content container -->
+  <div class="z-10 w-11/12 md:w-2/3 lg:w-1/3 bg-white rounded-lg shadow-lg p-6">
+    <h2 class="text-3xl font-bold text-center text-gray-800 mb-4">Welcome to Online Banking</h2>
+    
+    <!-- Form -->
+    <form class="flex flex-col gap-4" [formGroup]="loginForm">
+      <!-- Phone number input -->
+      <div class="flex flex-col gap-2">
+        <label for="phone" class="text-gray-800">Phone no*: </label>
+        <input type="tel" formControlName="phone" class="rounded-md bg-gray-100 border border-gray-300 p-3 text-md focus:outline-none focus:border-gray-400">
+      </div>
+      
+      <!-- Password input -->
+      <div class="flex flex-col gap-2">
+        <label for="password" class="text-gray-800">Password*: </label>
+        <input type="password" formControlName="password" class="rounded-md bg-gray-100 border border-gray-300 p-3 text-md focus:outline-none focus:border-gray-400">
+      </div>
+      
+      <!-- Login button -->
+      <button class="bg-gradient-to-r from-indigo-600 to-blue-500 rounded-full py-2 px-4 text-white hover:from-blue-500 hover:to-indigo-600 transition-all ease-in-out transform hover:scale-105 self-center" type="button" (click)="onClickLogin()">Log in</button>
+      
+      <!-- Sign up link -->
+      <p class="text-center text-gray-700 text-sm mt-4">Don't have an account? <a href="/signup" class="text-blue-500 hover:underline">Sign Up</a></p>
+    </form>
+    
+    <!-- Error message -->
+    <div class="text-red-600 mt-2">{{ msg }}</div>
+  </div>
+</section>
+

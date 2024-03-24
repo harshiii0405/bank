@@ -1,0 +1,128 @@
+<!-- <section class="relative h-screen overflow-hidden bg-cover bg-center"
+  style="background-image: url('https://png.pngtree.com/background/20230827/original/pngtree-d-rendering-of-a-glowing-digital-business-interface-showcasing-finance-innovation-picture-image_4843680.jpg');">
+
+  <div class="flex flex-col h-screen">
+    <nav class="bg-transparent absolute top-0 left-0 right-0 p-4 z-10">
+      <div class="container mx-auto flex items-center justify-between">
+        <img src="https://static.vecteezy.com/system/resources/thumbnails/013/948/616/small/bank-icon-logo-design-vector.jpg" alt="" class="h-8 w-auto text-white" />
+        <div class="flex flex-row">
+          <button class="bg-pink-500 hover:bg-slate-700 text-white font-bold py-1 px-2 mx-3 rounded" type="submit" routerLink="/transactions" routerLinkActive="active"(click)="showTransaction" >
+            Transactions
+          </button>
+          <button class="bg-blue-500 hover:bg-slate-700 text-white font-bold py-1 px-2 mx-3 rounded" type="submit" routerLink="/add" routerLinkActive="active">
+            AddMoney
+          </button>
+          <button class="bg-blue-500 hover:bg-slate-700 text-white font-bold py-1 px-2 mx-3 rounded" type="submit" routerLink="/wid" routerLinkActive="active">
+            Withdraw
+          </button>
+          <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-2 mx-3 rounded" type="button" (click)="openModal()">
+            Deactivate
+          </button>
+          <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-2 mx-3 rounded" type="button" (click)="openModals()">
+           Activate
+          </button>
+        </div>
+      </div>
+    </nav>
+    <div class="form-popup fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 border-2 border-gray-200 bg-white shadow-lg rounded-lg hidden" id="myForm">
+      <form action="" class="form-container p-5" [formGroup]="deleteForm" >
+        <label for="psw" class="block mb-2"><b>Are you sure ??:</b></label>
+        <button type="submit" class="btn bg-green-500 text-white py-4 px-5 rounded-lg w-full mb-2"(click)="openSubmit()">Deactivate</button>
+        <button type="button" class="btn bg-red-500 text-white py-4 px-5 rounded-lg w-full" (click)="closeForm()">Close</button>
+      </form>
+    </div>
+    <div class="form-popup fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 border-2 border-gray-200 bg-white shadow-lg rounded-lg hidden" id="aForm">
+      <form action="" class="form-container p-5" [formGroup]="activeForm" >
+        <label for="psw" class="block mb-2"><b>Are you sure ??:</b></label>
+        <button type="submit" class="btn bg-green-500 text-white py-4 px-5 rounded-lg w-full mb-2"(click)="openActive()">Activate</button>
+        <button type="button" class="btn bg-red-500 text-white py-4 px-5 rounded-lg w-full" (click)="closeForms()">Close</button>
+      </form>
+    </div>
+   
+    <table class="w-5000px mx-auto my-auto rounded-md border border-gray-300 bg-white shadow-md">
+      <thead>
+        <tr>
+          <th colspan="2"  class="border-b border-gray-300 bg-gray-200  text-xl font-semibold p-8" >Account Information</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="border-b border-gray-300 px-6 py-4">User Name:</td>
+          <td class="border-b border-gray-300 px-6 py-4">{{ userData?.userName }}</td>
+        </tr>
+        <tr>
+          <td class="border-b border-gray-300 px-6 py-4">Account No:</td>
+          <td class="border-b border-gray-300 px-6 py-4">{{ userData?.accountNo }}</td>
+        </tr>
+        <tr>
+          <td class="border-b border-gray-300 px-6 py-4">User ID:</td>
+          <td class="border-b border-gray-300 px-6 py-4">{{ userData?.userId }}</td>
+        </tr>
+        <tr>
+          <td class="border-b border-gray-300 px-6 py-4">Phone:</td>
+          <td class="border-b border-gray-300 px-6 py-4">{{ userData?.phone }}</td>
+        </tr>
+        
+       
+      </tbody>
+    </table>
+
+    
+  </div>
+  
+</section> -->
+
+<section class="relative h-screen overflow-hidden bg-gradient-to-br from-gray-200 via-gray-300 to-gray-400">
+
+  <nav class="absolute top-0 left-0 right-0 z-10 bg-transparent">
+    <div class="container mx-auto flex items-center justify-between p-4">
+      <img src="https://static.vecteezy.com/system/resources/thumbnails/013/948/616/small/bank-icon-logo-design-vector.jpg" alt="Bank Logo" class="h-8 w-auto" />
+      <div class="flex flex-row space-x-3">
+        <button class="nav-btn bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-full" type="submit" routerLink="/add" routerLinkActive="active">
+          Add Money
+        </button>
+        <button class="nav-btn bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-full" type="submit" routerLink="/wid" routerLinkActive="active">
+          Withdraw
+        </button>
+        <button class="nav-btn bg-green-500 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-full" type="button" (click)="openModals()">
+          Activate
+        </button>
+        <button class="nav-btn bg-red-500 hover:bg-red-700 text-white font-semibold py-2 px-4 rounded-full" type="button" (click)="openModal()">
+          Deactivate
+        </button>
+      </div>
+    </div>
+  </nav>
+  <!-- Form Container -->
+  <div class="container mx-auto flex items-center justify-center h-full">
+    <div class="w-full md:w-1/2 bg-white rounded-lg shadow-lg overflow-hidden animate__animated animate__fadeInUp animate__delay-1s">
+      <div class="p-6 border border-gray-200">
+        <h2 class="text-2xl font-semibold mb-4 text-gray-800">Account Information</h2>
+        <table class="table-auto w-full border border-gray-300">
+          <tbody>
+            <tr>
+              <td class="px-4 py-2 font-medium text-gray-600 border-b border-gray-300">User Name:</td>
+              <td class="px-4 py-2 text-gray-800 border-b border-gray-300">{{ userData?.userName }}</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2 font-medium text-gray-600 border-b border-gray-300">Account No:</td>
+              <td class="px-4 py-2 text-gray-800 border-b border-gray-300">{{ userData?.accountNo }}</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2 font-medium text-gray-600 border-b border-gray-300">User ID:</td>
+              <td class="px-4 py-2 text-gray-800 border-b border-gray-300">{{ userData?.userId }}</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2 font-medium text-gray-600 border-b border-gray-300">Phone:</td>
+              <td class="px-4 py-2 text-gray-800 border-b border-gray-300">{{ userData?.phone }}</td>
+            </tr>
+          </tbody>
+        </table>
+        <button class="btn-transactions bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-full mt-6 transition duration-300 ease-in-out transform hover:scale-105" type="submit" routerLink="/transactions" routerLinkActive="active" >
+          Transactions
+        </button>
+      </div>
+    </div>
+  </div>
+  
+</section>

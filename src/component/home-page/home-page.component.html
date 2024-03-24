@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bank Homepage</title>
+  <!-- Include Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <!-- Additional custom styles -->
+  <style>
+    /* Custom styles */
+    /* Navigation */
+    .nav-link {
+      transition: all 0.3s;
+      font-family: 'Roboto', sans-serif;
+    }
+    .nav-link:hover {
+      color: #4CAF50;
+    }
+    /* Hero Section */
+    .hero-btn {
+      transition: background-color 0.3s;
+    }
+    .hero-btn:hover {
+      background-color: #4CAF50;
+    }
+    /* Features Section */
+    .feature-card {
+      transition: transform 0.3s;
+    }
+    .feature-card:hover {
+      transform: translateY(-5px);
+    }
+    /* Footer */
+    .footer-link {
+      transition: color 0.3s;
+    }
+    .footer-link:hover {
+      color: #4CAF50;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 font-sans">
+  <!-- Navigation Bar -->
+  <nav class="bg-gray-900 p-4 flex items-center justify-between">
+    <!-- Bank Logo -->
+    <span href="/"  class="text-white text-2xl">&nbsp;🏦</span>
+    <div class="flex space-x-4">
+      <a href="/" class="nav-link text-white hover:text-green-500 font-bold text-lg">Home</a>
+      <a href="/signup" class="nav-link text-white hover:text-green-500 font-bold text-lg">Signup</a>
+      <a href="/login" class="nav-link text-white hover:text-green-500 font-bold text-lg">Login</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="bg-gray-900 text-white py-20">
+    <div class="container mx-auto text-center">
+      <h1 class="text-5xl font-bold mb-4">Welcome to Our Bank</h1>
+      <p class="text-lg">Your Trusted Financial Partner</p>
+      <a href="/signup" class="mt-8 bg-green-500 hover:bg-green-600 text-white py-2 px-6 rounded-full inline-block hero-btn transition duration-300">Open an Account</a>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="py-20">
+    <div class="container mx-auto flex justify-center space-x-8">
+      <div class="max-w-xs bg-white p-8 rounded-lg shadow-lg text-center feature-card">
+        <h2 class="text-2xl font-bold mb-4">Personal Banking</h2>
+        <p class="text-gray-700">Manage your finances with our range of personal banking services.</p>
+      </div>
+      <div class="max-w-xs bg-white p-8 rounded-lg shadow-lg text-center feature-card">
+        <h2 class="text-2xl font-bold mb-4">Business Solutions</h2>
+        <p class="text-gray-700">Explore our business banking solutions tailored to your needs.</p>
+      </div>
+      <div class="max-w-xs bg-white p-8 rounded-lg shadow-lg text-center feature-card">
+        <h2 class="text-2xl font-bold mb-4">Digital Banking</h2>
+        <p class="text-gray-700">Bank on the go with our secure and convenient digital banking services.</p>
+      </div>
+    </div>
+  </section>
+
+  
+  <footer class="bg-gray-900 text-white py-8">
+    <div class="container mx-auto text-center">
+      &copy; 2024 Harshada's Bank. All rights reserved.
+    </div>
+  </footer>
+</body>
+</html>

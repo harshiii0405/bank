@@ -1,0 +1,21 @@
+<section class="relative h-screen overflow-hidden bg-cover bg-center">
+    <div class="p-auto m-auto w-3/4 pt-16">
+      <div class="mx-auto mt-8 w-1/2 rounded bg-slate-200 p-12">
+        <form action="" class="flex flex-col gap-8 text-xl text-slate-800" [formGroup]="addMoneyForm" >
+          <div class="text-center font-mono text-3xl"></div>
+          <div class="flex flex-col gap-2">
+            <label for="phone">Account no*: </label>
+            <input type="tel" formControlName="phone" class="text-md rounded-md bg-slate-300 p-1 focus:border-0" />
+          </div>
+          <div class="flex flex-col gap-2">
+            <label for="amount">Add Money*: </label>
+            <input type="tel" formControlName="amount" class="text-md rounded-md bg-slate-300 p-1 focus:border-0" />
+          </div>
+          <div class="flex justify-start">
+            <button class="me-auto rounded-xl bg-slate-900 p-2 px-4 text-white transition-all ease-in-out hover:bg-slate-300 hover:text-slate-900" (click)="onClickAddMoney()">Send</button>
+          </div>
+        </form>
+      </div>
+    </div>
+</section>
+  
